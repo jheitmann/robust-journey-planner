@@ -5,9 +5,9 @@ Lab in Data Science (EE-490) final assignment.
 Group: **DataBrewers**  
   
 Team members:
-- Mathias Gonçalves [258976]
-- Julien Heitmann [257297]
-- Louis Landelle [257309]
+- [Mathias Gonçalves](https://github.com/magoncal)
+- [Julien Heitmann](https://github.com/jheitmann)
+- [Louis Landelle](https://github.com/louislandelle)
 
 You will find the final report in `journey-planning.ipynb` in the root folder.
 You can see our presentation video in `DSLab Presentation Data-Brewers.mp4` in the root folder, as well as our slides.
