@@ -1,0 +1,30 @@
+{% extends 'dbjp_base.html' %}
+
+{% block header %}
+  {% block title %}Results{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+<div id="lrparent">
+    <div id="left_res">
+        {% for step in steps %}
+        <div class="step"> 
+            <img src="{{url_for('static', filename='pt.png')}}" width=16px height=16px>  <b>{{ step["departure_station_name"] }}</b> {{ step["departure_ts"] }} <br />
+            <img src="{{url_for('static', filename=step['type']+'.png')}}" width=22px height=22px> <i style="color:crimson">{{ step["type"] }} during {{ step["duration"] }} minutes</i>  <br />
+            <img src="{{url_for('static', filename='pt.png')}}" width=16px height=16px> <b>{{ step["arrival_station_name"] }}</b> {{ step["arrival_ts"] }}  <br />
+            
+        </div>
+        {% endfor %}
+    </div>
+    <div id="right_map">
+        <h4> {{request.args.get('stn_from')}} > {{request.args.get('stn_to')}}
+        with q-value {{request.args.get('qvalue')}} %</h4>
+        <iframe width=500 height=500 src={{url_for('map_endpoint', fname='steps.html')}}></iframe>
+    </div>
+</div>
+
+  <!--<h3>Isochrone map with q-value {{request.args.get('qvalue')}} %,
+    origin at {{request.args.get('stn_from')}}</h3>
+  <iframe width=500 height=500 src={{url_for('map_endpoint', fname='isochrones.html')}}></iframe>-->
+{% endblock %}

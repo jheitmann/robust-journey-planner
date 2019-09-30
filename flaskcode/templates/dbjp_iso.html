@@ -1,0 +1,28 @@
+{% extends 'dbjp_base.html' %}
+
+{% block header %}
+  {% block title %}Results{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+<div id="iso">
+    <div id="first" class="divSquare">
+        <h4>Isochrone map with q-value 0.5, origin at {{request.args.get('stn_origin')}}</h4>
+        <iframe width=500 height=500 src={{url_for('map_endpoint', fname='isochrones0.5.html')}}></iframe></div>
+    <div id="second" class="divSquare">
+        <h4>Isochrone map with q-value 0.75, origin at {{request.args.get('stn_origin')}}</h4>
+        <iframe width=500 height=500 src={{url_for('map_endpoint', fname='isochrones0.75.html')}}></iframe>
+    </div>
+    <div style='clear:both'></div>
+    <div id="third" class="divSquare">
+        <h4>Isochrone map with q-value 0.9, origin at {{request.args.get('stn_origin')}}</h4>
+        <iframe width=500 height=500 src={{url_for('map_endpoint', fname='isochrones0.9.html')}}></iframe>
+    </div>
+    <div id="fourth" class="divSquare">
+        <h4>Isochrone map with q-value 1.0, origin at {{request.args.get('stn_origin')}}</h4>
+        <iframe width=500 height=500 src={{url_for('map_endpoint', fname='isochrones1.0.html')}}></iframe>
+    </div>
+</div>
+
+{% endblock %}

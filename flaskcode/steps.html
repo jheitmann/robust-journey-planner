@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_5b768ad6bfea4f069d3c27116082b1d7 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_5b768ad6bfea4f069d3c27116082b1d7" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_5b768ad6bfea4f069d3c27116082b1d7 = L.map(
+        'map_5b768ad6bfea4f069d3c27116082b1d7', {
+        center: [47.39851783333334, 8.573240833333335],
+        zoom: 12,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_6c96ef653b764aad96d1847335948295 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+    
+                var poly_line_1ef2602887b840dea79a6371c4de0e45 = L.polyline(
+                    [[47.436563, 8.472064], [47.378177, 8.540192]],
+                    {
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "red",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "noClip": false,
+  "opacity": 1,
+  "smoothFactor": 1.0,
+  "stroke": true,
+  "weight": 4
+}
+                    )
+                    .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+                var poly_line_e3d210355c8d46088ec9ef20c5560f7f = L.polyline(
+                    [[47.378177, 8.540192], [47.397213, 8.596132]],
+                    {
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "red",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "noClip": false,
+  "opacity": 1,
+  "smoothFactor": 1.0,
+  "stroke": true,
+  "weight": 4
+}
+                    )
+                    .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+                var poly_line_6e5e650349ed40d38fbcd6fcd7acbaa1 = L.polyline(
+                    [[47.397213, 8.596132], [47.396085, 8.599181]],
+                    {
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": "6, 6",
+  "dashOffset": "3",
+  "fill": false,
+  "fillColor": "red",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "noClip": false,
+  "opacity": 1,
+  "smoothFactor": 1.0,
+  "stroke": true,
+  "weight": 4
+}
+                    )
+                    .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+                var poly_line_cb3a2890b89545b39e35b7d5133d11cf = L.polyline(
+                    [[47.396085, 8.599181], [47.391781, 8.614718]],
+                    {
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "red",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "noClip": false,
+  "opacity": 1,
+  "smoothFactor": 1.0,
+  "stroke": true,
+  "weight": 4
+}
+                    )
+                    .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+                var poly_line_f174b6c0772a45e6abb3465435e64461 = L.polyline(
+                    [[47.391781, 8.614718], [47.391288, 8.617158]],
+                    {
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": "6, 6",
+  "dashOffset": "3",
+  "fill": false,
+  "fillColor": "red",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "noClip": false,
+  "opacity": 1,
+  "smoothFactor": 1.0,
+  "stroke": true,
+  "weight": 4
+}
+                    )
+                    .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+            var circle_marker_9cd027aa2014414e965e85fd07914b83 = L.circleMarker(
+                [47.436563, 8.472064],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "white",
+  "fillOpacity": 1,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+            var popup_3bf07afe076744289379589c212dce50 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_a3694f0439db414394f11869e91c1e48 = $(`<div id="html_a3694f0439db414394f11869e91c1e48" style="width: 100.0%; height: 100.0%;">Regensdorf-Watt</div>`)[0];
+                popup_3bf07afe076744289379589c212dce50.setContent(html_a3694f0439db414394f11869e91c1e48);
+            
+
+            circle_marker_9cd027aa2014414e965e85fd07914b83.bindPopup(popup_3bf07afe076744289379589c212dce50)
+            ;
+
+            
+        
+    
+            var circle_marker_a7d68f8f1cf44f92907c7e0e8546c040 = L.circleMarker(
+                [47.378177, 8.540192],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "white",
+  "fillOpacity": 1,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+            var popup_e980a3b0015542c497e4f94a77b28a62 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b221bc35ec024a5f8f4acac32e4cb270 = $(`<div id="html_b221bc35ec024a5f8f4acac32e4cb270" style="width: 100.0%; height: 100.0%;">Zürich HB, arr. 12:11</div>`)[0];
+                popup_e980a3b0015542c497e4f94a77b28a62.setContent(html_b221bc35ec024a5f8f4acac32e4cb270);
+            
+
+            circle_marker_a7d68f8f1cf44f92907c7e0e8546c040.bindPopup(popup_e980a3b0015542c497e4f94a77b28a62)
+            ;
+
+            
+        
+    
+            var circle_marker_37df81d076084bc1b655b24c281c4787 = L.circleMarker(
+                [47.397213, 8.596132],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "white",
+  "fillOpacity": 1,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+            var popup_c927ab34daca4ab09c89a7bb1fde086f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7226e671b45040e1bbdde2dd09653f4e = $(`<div id="html_7226e671b45040e1bbdde2dd09653f4e" style="width: 100.0%; height: 100.0%;">Stettbach, arr. 12:31</div>`)[0];
+                popup_c927ab34daca4ab09c89a7bb1fde086f.setContent(html_7226e671b45040e1bbdde2dd09653f4e);
+            
+
+            circle_marker_37df81d076084bc1b655b24c281c4787.bindPopup(popup_c927ab34daca4ab09c89a7bb1fde086f)
+            ;
+
+            
+        
+    
+            var circle_marker_550a0bf45fba4767b5c4d173dbcbd4e0 = L.circleMarker(
+                [47.396085, 8.599181],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "white",
+  "fillOpacity": 1,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+            var popup_da64462ecd3d4571a77997803ff6ec4d = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_92423ed9ca384466918cafc36df8737d = $(`<div id="html_92423ed9ca384466918cafc36df8737d" style="width: 100.0%; height: 100.0%;">Dübendorf, Hoffnung, arr. 12:39</div>`)[0];
+                popup_da64462ecd3d4571a77997803ff6ec4d.setContent(html_92423ed9ca384466918cafc36df8737d);
+            
+
+            circle_marker_550a0bf45fba4767b5c4d173dbcbd4e0.bindPopup(popup_da64462ecd3d4571a77997803ff6ec4d)
+            ;
+
+            
+        
+    
+            var circle_marker_98aa46b5644040c295d61455c2845325 = L.circleMarker(
+                [47.391781, 8.614718],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "white",
+  "fillOpacity": 1,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+            var popup_8483bf3f22784b57847e3493fb27ada6 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_af1ce48df906473c8b448001fbb61bb4 = $(`<div id="html_af1ce48df906473c8b448001fbb61bb4" style="width: 100.0%; height: 100.0%;">Dübendorf, Högler, arr. 12:47</div>`)[0];
+                popup_8483bf3f22784b57847e3493fb27ada6.setContent(html_af1ce48df906473c8b448001fbb61bb4);
+            
+
+            circle_marker_98aa46b5644040c295d61455c2845325.bindPopup(popup_8483bf3f22784b57847e3493fb27ada6)
+            ;
+
+            
+        
+    
+            var circle_marker_4da0b7d5694f4fd69b14dabb3542b45b = L.circleMarker(
+                [47.391288, 8.617158],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "white",
+  "fillOpacity": 1,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_5b768ad6bfea4f069d3c27116082b1d7);
+            
+    
+            var popup_cf5c6a32da5e45fd968d51e67b3af453 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_a0bffe4e819b4dc084f9be4d82eb8abe = $(`<div id="html_a0bffe4e819b4dc084f9be4d82eb8abe" style="width: 100.0%; height: 100.0%;">Dübendorf, Grüzenstrasse, arr. 12:49</div>`)[0];
+                popup_cf5c6a32da5e45fd968d51e67b3af453.setContent(html_a0bffe4e819b4dc084f9be4d82eb8abe);
+            
+
+            circle_marker_4da0b7d5694f4fd69b14dabb3542b45b.bindPopup(popup_cf5c6a32da5e45fd968d51e67b3af453)
+            ;
+
+            
+        
+</script>

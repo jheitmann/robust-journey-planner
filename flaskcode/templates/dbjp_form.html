@@ -1,0 +1,51 @@
+{% extends 'dbjp_base.html' %}
+
+{% block header %}
+    {% block title %}Search for a connection or visualize isochrones maps{% endblock %}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='autocomplete.css') }}">
+<div id="lrparent">
+    <div id="left">
+        <h4>Search for connection</h4>
+        <form method="post" autocomplete="off">
+            <div class="autocomplete" style="width:300px;">
+                <input class="stylform"  type="text" name="from" id="from" placeholder="From..." required>
+            </div>
+            <div class="autocomplete" style="width:300px;">
+                <input class="stylform"  type="text" name="to" id="to" placeholder="To..." required>
+            </div>
+            <!-- <label for="date">Date</label> -->
+            <input class="stylform"  type="date" name="date" id="date" value="2019-01-02"  required>
+            <!-- <label for="time">Time</label> -->
+            <input class="stylform"  type="time" name="time" id="time" value="12:00" required>
+            <label for="qvalue">With Q (in %)</label>
+            <!--<div class="stylform">-->
+            <input type="range" min="0" max="100" value="50" name="qvalue" class="slider" id="qvalue" 
+                oninput="qvalue_output.value = qvalue.value + ' %'" required>
+            <output name="qvalue_output" id="qvalue_output_id">50 %</output><!--</div>-->
+            <input class="stylform"  type="submit" name="btn" value="Compute route">
+        </form>
+        <i>Warning:The demo uses a 4h pregenerated data window, only use between 12:00 and 14:00 on January 2nd</i>
+    </div>
+    <div id="right">
+        <h4>Visualize isochrones maps</h4>
+        <form method="post" autocomplete="off">
+            <!-- <label for="origin">Origin</label> -->            
+            <div class="autocomplete" style="width:300px;">
+                <input class="stylform"  type="text" name="origin" id="origin" placeholder="Origin" required>
+            </div>
+            <input class="stylform"  type="submit" name="btn" value="Compute isochrones">            
+        </form>
+        <i>Warning:It will take some time to compute before redirecting</i>
+    </div>
+</div>
+
+<script src="{{url_for('static', filename='autocomplete.js')}}"></script>
+<script>
+    autocomplete(document.getElementById("from"), {{all_station_names|safe}});
+    autocomplete(document.getElementById("to"), {{all_station_names|safe}});
+    autocomplete(document.getElementById("origin"), {{all_station_names|safe}});
+</script>
+{% endblock %}

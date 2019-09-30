@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>{% block title %}{% endblock %} - Data Brewers' Journey Planner</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='dbjp_style.css') }}">
+    </head>
+
+    <body><!-- background="{{ url_for('static', filename='bing-hao-1203901-unsplash.jpg') }}">
+        -->
+        <div id="topbar">
+                <h1><img style="vertical-align:middle" src="{{url_for('static', filename='logo.png')}}" width=160px height=80px> {% block header %}{% endblock %}</h1>
+            <!-- <h1>Data Brewers' Journey Planner - </h1> -->
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
